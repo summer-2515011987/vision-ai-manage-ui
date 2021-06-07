@@ -29,35 +29,35 @@ const routes = [{
                 name: "userManagement",
                 component: () =>
                     import ("@/views/imageManagement/userManagement"),
-                meta: { title: "用户管理" }
+                meta: { title: "用户应用" }
             },
             {
                 path: "/home/marketImage",
                 name: "userManagement",
                 component: () =>
                     import ("@/views/imageManagement/marketImage"),
-                meta: { title: "市场镜像" }
+                meta: { title: "市场应用" }
             },
             {
                 path: "/home/containerTem",
                 name: "containerTem",
                 component: () =>
                     import ("@/views/containerManage/containerTem"),
-                meta: { title: "容器模板" }
+                meta: { title: "应用模板" }
             },
             {
                 path: "/home/containerDeploy",
                 name: "containerDeploy",
                 component: () =>
                     import ("@/views/containerManage/containerDeploy"),
-                meta: { title: "容器部署" }
+                meta: { title: "容器应用" }
             },
             {
                 path: "/home/nodeConfig",
                 name: "nodeConfig",
                 component: () =>
                     import ("@/views/cloudNews/nodeConfig"),
-                meta: { title: "节点配置" }
+                meta: { title: "消息下发" }
             },
             {
                 path: "/home/messageDistribution",
