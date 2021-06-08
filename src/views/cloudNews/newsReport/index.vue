@@ -1,10 +1,10 @@
 <template>
-  <div>容器部署</div>
+  <div class="newsReport">消息上报</div>
 </template>
 
 <script>
 export default {
-  name: "",
+  name: "newsReport",
   components: {},
   props: {},
   data() {

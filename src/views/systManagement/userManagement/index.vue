@@ -1,17 +1,13 @@
 <template>
-  <div>容器模板</div>
+  <div class="userManagement">用户管理</div>
 </template>
 
 <script>
 export default {
-  name: "",
-  components: {},
-  props: {},
+  name: "userManagement",
   data() {
     return {};
   },
-  computed: {},
-  watch: {},
   created() {},
   mounted() {},
   methods: {}

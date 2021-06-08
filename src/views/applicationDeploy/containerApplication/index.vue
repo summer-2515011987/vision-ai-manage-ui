@@ -1,10 +1,10 @@
 <template>
-  <div class="marketImage">市场镜像</div>
+  <div class="containerApplication">容器应用</div>
 </template>
 
 <script>
 export default {
-  name: "marketImage",
+  name: "containerApplication",
   components: {},
   props: {},
   data() {

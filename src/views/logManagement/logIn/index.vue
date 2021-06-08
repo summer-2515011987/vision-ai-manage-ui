@@ -1,19 +1,13 @@
 <template>
-  <div class="userManagement">
-    用户管理
-  </div>
+  <div class="logIn">登录日志</div>
 </template>
 
 <script>
 export default {
-  name: "",
-  components: {},
-  props: {},
+  name: "logIn",
   data() {
     return {};
   },
-  computed: {},
-  watch: {},
   created() {},
   mounted() {},
   methods: {}

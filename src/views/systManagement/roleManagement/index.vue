@@ -1,17 +1,15 @@
 <template>
-  <div class="nodeConfig">节点配置</div>
+  <div class="roleManagement">
+    角色管理
+  </div>
 </template>
 
 <script>
 export default {
-  name: "nodeConfig",
-  components: {},
-  props: {},
+  name: "roleManagement",
   data() {
     return {};
   },
-  computed: {},
-  watch: {},
   created() {},
   mounted() {},
   methods: {}
