@@ -44,6 +44,10 @@
       <el-menu-item index="/home/userManagement">用户管理</el-menu-item>
       <el-menu-item index="/home/roleManagement">角色管理</el-menu-item>
     </el-submenu>
+    <el-menu-item index="/home/menuManagement">
+      <!-- <i class="el-icon-s-home"></i> -->
+      <span slot="title">菜单管理</span>
+    </el-menu-item>
     <el-submenu index="6">
       <template slot="title">
         <!-- <i class="el-icon-chat-round"></i> -->

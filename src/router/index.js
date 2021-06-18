@@ -74,6 +74,25 @@ const routes = [
         component: () => import("@/views/systManagement/roleManagement"),
         meta: { title: "角色管理" }
       },
+      // 菜单管理
+      {
+        path: "/home/menuManagement",
+        name: "menuManagement",
+        component: () => import("@/views/menuManagement"),
+        meta: { title: "菜单管理" }
+      },
+      {
+        path: "/home/addMenu",
+        name: "addMenu",
+        component: () => import("@/views/menuManagement/add"),
+        meta: { title: "添加菜单" }
+      },
+      {
+        path: "/home/updateMenu",
+        name: "updateMenu",
+        component: () => import("@/views/menuManagement/update"),
+        meta: { title: "编辑菜单" }
+      },
       {
         path: "/home/logIn",
         name: "logIn",

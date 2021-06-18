@@ -1,7 +1,7 @@
 <template>
   <div class="userManagement">
     <createBtn titleText="用户管理" />
-    <el-card>
+    <el-card class="userCard">
       <!-- 表单项 -->
       <el-form
         :inline="true"
@@ -110,7 +110,7 @@
         :current-page.sync="listQuery.pageNum"
         :page-size="10"
         :page-sizes="[10, 15, 20]"
-        :total="1000"
+        :total="total"
       >
       </el-pagination>
     </el-card>
@@ -156,11 +156,12 @@ export default {
   },
   data() {
     return {
+      total: 10,
       detail: {},
       detailState: false, //添加用户
       roleVisible: false, //角色
       alloVisible: false, //分配配额
-      listQuery: Object.assign({}, defaultListQuery),
+      listQuery: Object.assign({}, defaultListQuery), //传到列表里的参数
       listLoading: false,
       list: [
         {
@@ -202,12 +203,44 @@ export default {
       ]
     };
   },
-  created() {},
+  created() {
+    this.getList();
+  },
   mounted() {},
   methods: {
+    // 查询列表
+    getList() {
+      console.log("获取列表数据");
+      // this.listLoading = true;
+      // fetchList(this.listQuery).then(response => {
+      //   this.listLoading = false;
+      //   this.list = response.data.list;
+      //   this.total = response.data.total;
+      // });
+    },
     // 是否启用
-    handleStatusChange(data) {
-      console.log("status", data);
+    handleStatusChange(index, row) {
+      this.$confirm("是否要修改该状态?", "提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning"
+      })
+        .then(() => {
+          // 调接口传参
+          // updateStatus(row.id, { status: row.status }).then(response => {
+          //   this.$message({
+          //     type: "success",
+          //     message: "修改成功!"
+          //   });
+          // });
+        })
+        .catch(() => {
+          this.$message({
+            type: "info",
+            message: "取消修改"
+          });
+          this.getList();
+        });
     },
     // 分配配额
     allocationQuota() {
@@ -252,9 +285,7 @@ export default {
     handleResetSearch() {
       this.listQuery = Object.assign({}, defaultListQuery);
     },
-    getList() {
-      console.log("获取列表数据");
-    },
+
     handleSearchList() {
       this.listQuery.pageNum = 1;
       this.getList();
@@ -280,5 +311,8 @@ export default {
 }
 .tableList {
   margin-top: 10px;
+}
+.userCard {
+  margin-top: 20px;
 }
 </style>
